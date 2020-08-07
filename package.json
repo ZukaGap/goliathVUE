@@ -9,9 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "plyr": "^3.6.2",
-    "vue": "^2.6.11",
-    "vue-plyr": "^6.0.4"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

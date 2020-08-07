@@ -1,5 +1,4 @@
-<template
-  >
+<template>
   <div class="player">
     <div class="player-controls">
       <button>
