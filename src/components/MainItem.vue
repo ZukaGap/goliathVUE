@@ -1,29 +1,27 @@
 <template>
-  <div class="active">
+  <div class="item">
     <!-- <div class={props.active ? "item active" : "item"}> -->
     <div class="item__left">
       <button>
-        <HeartLogo />
+        <HeartSVG />
       </button>
-      <!-- <img class="item__IMG" src="{props.img}" /> -->
-      <!-- <span>{props.number}</span>
-      <span>{props.name}</span> -->
+      <img class="item__IMG" v-bind:src="img" />
+      <span>{{number}}</span>
+      <span>{{name}}</span>
     </div>
     <div class="item__right">
-      <!-- <span>{props.time}</span> -->
+      <span>{{time}}</span>
       <div class="dropdown">
         <button class="dropdown__more">
-          <DotsLogo />
+          <DotsHSVG />
         </button>
         <div class="dropdown__content">
           <a
             class="donwloadBTN"
             type="button"
             href="./dots.svg"
-            download="musicname.mp3"
-          >
-            Donwload
-          </a>
+            v-bind:download="name + '.mp3'"
+          >Donwload</a>
           <input class="reportBTN" type="button" value="Report" />
         </div>
       </div>
@@ -32,13 +30,20 @@
 </template>
 
 <script>
-import DotsLogo from "../../public/dots_h.svg";
-import HeartLogo from "../../public/heart.svg";
+import DotsHSVG from "./svgs/dotsHSVG.vue";
+import HeartSVG from "./svgs/heartSVG.vue";
 export default {
-  name: "active",
+  name: "MainItem",
   components: {
-    DotsLogo,
-    HeartLogo,
+    DotsHSVG,
+    HeartSVG,
+  },
+  props: {
+    name: String,
+    number: Number,
+    img: String,
+    time: String,
+    donwload: String,
   },
 };
 </script>

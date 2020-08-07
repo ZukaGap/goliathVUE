@@ -5,7 +5,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Nav",
+};
 </script>
 <style lang="scss" scoped>
 $focuscolor: #660d7a;

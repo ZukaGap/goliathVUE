@@ -1,17 +1,17 @@
 <template>
   <div class="header">
     <form class="search">
-      <button class="search__BTN"><SearchLogo /></button>
-      <input
-        type="text"
-        class="search__Text"
-        placeholder="Search Music &amp; Add"
-      />
+      <button class="search__BTN">
+        <SearchSVG />
+      </button>
+      <input type="text" class="search__Text" placeholder="Search Music &amp; Add" />
     </form>
     <form class="login">
       <input class="login__BTN" type="button" value="Login" />
       <div class="dropdown">
-        <button class="login__BTN-more"><DotsLogo /></button>
+        <button class="login__BTN-more">
+          <DotsVSVG />
+        </button>
         <div class="dropdown__content">
           <input class="Sign_Up-BTN" type="button" value="Sign Up" />
         </div>
@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import SearchLogo from "../../public/search.svg";
-import DotsLogo from "../../public/dots_v.svg";
+import SearchSVG from "./svgs/SearchSVG.vue";
+import DotsVSVG from "./svgs/dotsVSVG.vue";
 
 export default {
-  name: "header",
+  name: "Header",
   components: {
-    SearchLogo,
-    DotsLogo,
+    SearchSVG,
+    DotsVSVG,
   },
 };
 </script>

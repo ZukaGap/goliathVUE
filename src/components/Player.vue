@@ -1,28 +1,29 @@
 <template
-  ><div class="player">
+  >
+  <div class="player">
     <div class="player-controls">
       <button>
-        <LeftPLogo />
+        <LeftPSVG />
       </button>
       <button>
-        <PlayLogo />
+        <PlaySVG />
       </button>
       <button>
-        <RightPLogo />
+        <RightPSVG />
       </button>
       <button>
-        <VolumeLogo />
+        <VolumeSVG />
       </button>
       <div class="player-controls-RepeatRandom">
         <button>
-          <RepeatLogo />
+          <RepeatSVG />
         </button>
         <button>
-          <ShufleLogo />
+          <ShufleSVG />
         </button>
       </div>
     </div>
-    <!-- <img src="{IMG}" alt="music img" class="player__IMG" /> -->
+    <img src="{IMG}" alt="music img" class="player__IMG" />
     <p class="player__musicName">Men I Trust Lauren</p>
     <div class="time">
       <span id="current-time">2:11</span>
@@ -35,21 +36,21 @@
 </template>
 
 <script>
-import LeftPLogo from "../../public/leftP.svg";
-import RightPLogo from "../../public/rightP.svg";
-import PlayLogo from "../../public/play.svg";
-import VolumeLogo from "../../public/volume.svg";
-import RepeatLogo from "../../public/repeat.svg";
-import ShufleLogo from "../../public/random.svg";
+import LeftPSVG from "./svgs/leftPSVG.vue";
+import RightPSVG from "./svgs/rightPSVG.vue";
+import PlaySVG from "./svgs/playSVG.vue";
+import VolumeSVG from "./svgs/volumeSVG.vue";
+import RepeatSVG from "./svgs/repeatSVG.vue";
+import ShufleSVG from "./svgs/randomSVG.vue";
 export default {
-  name: "player",
+  name: "Player",
   components: {
-    LeftPLogo,
-    RightPLogo,
-    PlayLogo,
-    VolumeLogo,
-    RepeatLogo,
-    ShufleLogo,
+    LeftPSVG,
+    RightPSVG,
+    PlaySVG,
+    VolumeSVG,
+    RepeatSVG,
+    ShufleSVG,
   },
 };
 </script>
